@@ -21,7 +21,7 @@ const textVariants: Variants = {
 
 function HeroBanner() {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-gradient-to-b from-[#001F50] to-[#002E6D]">
+    <div className="h-screen w-full flex justify-center items-center bg-blue-950">
       <div className="h-screen w-full flex justify-center items-center bg-black/60 absolute z-10"></div>
       <img
         src="#"
@@ -45,7 +45,7 @@ function HeroBanner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            custom={3}
+            custom={2}
             className="z-30 text-white text-7xl"
             >
             I
@@ -55,7 +55,7 @@ function HeroBanner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            custom={5}
+            custom={3}
             className="z-30 text-white text-7xl"
             >
             B
@@ -65,7 +65,7 @@ function HeroBanner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            custom={7}
+            custom={4}
             className="z-30 text-white text-7xl"
             >
             E
@@ -75,7 +75,7 @@ function HeroBanner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            custom={9}
+            custom={5}
             className="z-30 text-white text-7xl"
             >
             '
@@ -85,7 +85,7 @@ function HeroBanner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            custom={11}
+            custom={6}
             className="z-30 text-white text-7xl"
             >
             S
@@ -96,7 +96,7 @@ function HeroBanner() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          custom={13}
+          custom={7}
           className="z-10 text-white/90 lg:text-5xl text-2xl pt-10"
         >
           BISTRONOMIE

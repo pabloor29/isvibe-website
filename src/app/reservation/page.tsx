@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../../../components/Navbar'
+import Footer from '../../../components/Footer'
 
 function reservation() {
   return (
-    <div>reservation</div>
+    <>
+      <Navbar />
+      <div>Reservation</div>
+      <Footer />
+    </>
   )
 }
 

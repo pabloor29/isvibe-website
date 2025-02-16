@@ -31,7 +31,7 @@ function Footer() {
             className="flex flex-col items-center justify-center text-center hover:underline text-xl"
             href="#"
           >
-            Place Carnot
+            3 Place Carnot
             <br />
             11000, Carcassonne
           </a>

@@ -1,8 +1,16 @@
 import React from 'react'
+import Navbar from '../../../components/Navbar'
+import Footer from '../../../components/Footer'
+import Event from '../../../components/Event'
 
 function Presentation() {
   return (
-    <div>Presentation</div>
+    <>
+      <Navbar />
+      <div>Presentation</div>
+      <Event />
+      <Footer />
+    </>
   )
 }
 
