@@ -10,15 +10,12 @@ import {
 } from "./ui/sheet";
 import Link from "next/link";
 import { Variants, motion } from "framer-motion";
+import { Menu } from "lucide-react";
 
 const links = [
   {
     label: "Accueil",
     href: "/",
-  },
-  {
-    label: "A propos",
-    href: "/a-propos",
   },
   {
     label: "Menu",
@@ -54,72 +51,65 @@ function Navbar() {
         whileInView="visible"
         viewport={{ once: true, margin: "30%" }}
         variants={Variants}
-        className="fixed w-full h-16 backdrop-blur justify-between items-center text-white px-8 z-50 hidden lg:flex"
+        className="fixed w-full h-16 backdrop-blur justify-between items-center text-white px-8 z-50 hidden lg:flex bg-blueDark/50"
       >
-        <a href="#" className="h-16 w-16 py-2">
-          <img src="#" alt="logo" />
-        </a>
+        <div className="flex justify-start w-1/5">
+          <a href="#" className="h-full">
+            <h1 className="font-tanBuster text-2xl text-salmon pt-2">V!BES</h1>
+          </a>
+        </div>
         <div>
-          <li className="flex justify-center space-x-12">
+          <li className="flex justify-center space-x-12 font-typewriter text-salmon">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="leading-none text-2xl"
+                className="leading-none text-2xl block transition-transform duration-200 hover:-translate-y-2"
               >
                 {link.label}
               </a>
             ))}
           </li>
         </div>
-        <Link
-          href="/reservation"
-          className="leading-none text-2xl"
-        >
-          Réservation
-        </Link>
+        <div className="w-1/5 flex justify-end">
+          <Link
+            href="/reservation"
+            className="leading-none text-2xl font-typewriter text-salmon transition-transform duration-200 hover:-translate-y-2"
+          >
+            Réservation
+          </Link>
+        </div>
       </motion.div>
 
-      <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full px-6">
+      <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full">
         <Sheet key="left">
-          <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full shadow bg-greenBottle/50">
-            <img src="#" alt="hamburger menu icon" />
+          <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full bg-blueDark/50 ml-6">
+            <Menu color="#FBC3BC"/>
           </SheetTrigger>
-          <SheetContent className="bg-red-500">
+          <SheetContent className="bg-blueDark">
             <SheetHeader>
               <SheetDescription className="flex flex-col">
                 {links.map((items) => (
                   <a
                     key={items.label}
                     href={items.href}
-                    className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-black duration-300 px-5 py-3 cursor-pointer"
+                    className="overflow-hidden h-20 w-3/5 flex items-center hover:bg-black duration-300 px-5 py-3 cursor-pointer"
                   >
-                    <h3 className="text-3xl tracking-wide">
+                    <h3 className="text-3xl tracking-wide font-typewriter text-salmon">
                       {items.label}
                     </h3>
                   </a>
                 ))}
-                <a
-                  href="/reservation"
-                  className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-black duration-300 px-5 py-3 cursor-pointer"
-                >
-                  <h3 className="text-3xl tracking-wide">
-                    Réservation
-                  </h3>
-                </a>
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
         </Sheet>
         <a
           href="/reservation"
-          className="shadow cursor-pointer overflow-hidden h-10 px-3 rounded-full bg-black/50 flex items-center justify-center"
+          className="shadow cursor-pointer overflow-hidden h-10 rounded-full bg-blueDark/50 flex items-center justify-center mr-6 px-2"
         >
-          <h3 className="text-2xl tracking-wide text-white">Réserver</h3>
+          <h3 className="text-2xl tracking-wide text-salmon">Réserver</h3>
         </a>
-        {/* <a href="/reservation" className="shadow cursor-pointer overflow-hidden w-10 h-10 rounded-full bg-white flex items-center justify-center">
-          <Utensils />
-        </a> */}
       </div>
     </nav>
   );

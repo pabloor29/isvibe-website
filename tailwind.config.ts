@@ -25,11 +25,10 @@ module.exports = {
       "9xl": "8rem",
     },
     fontFamily: {
-      cormorantGaramond: ["Cormorant Garamond", "ui-serif"],
-      ttInterphasesMono: ["TT Interphases Pro Mono Trl", "ui-serif"],
-      scandiloverScript: ["Scandilover Script", "ui-serif"],
-      schoolbell: ["Schoolbell", "ui-serif"],
-      anton: ["Anton", "ui-serif"],
+      typewriter: ["Typewriter", "ui-serif"],
+      tanBuster: ["TanBuster", "ui-serif"],
+      migra: ["Migra", "ui-serif"],
+      theSeasons: ["The Seasons", "ui-serif"],
     },
     container: {
       center: true,
@@ -45,9 +44,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        greenBottle: '#192C1D',
-        pinkCarbo: '#F7DAD9',
-        whiteSmokedBG: '#FEF8ED',
+        salmon: '#FBC3BC',
+        blueDark: '#00072D',
+        blueDarkBG: '#0E1539',
+        blueSmoked: '61A5C2',
       },
       borderRadius: {
         lg: "var(--radius)",

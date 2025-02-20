@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Typewriter";
+    src: url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.eot");
+    src: url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a67d98abe8980caaa1768b6e27b323c6.svg#Typewriter")format("svg");
+}
+
+@font-face {
+    font-family: 'TanBuster';
+    src: url('../../public/font/tan-buster/TAN-BUSTER.otf') format('woff2'),
+  }
+
+  @font-face {
+    font-family: "Migra";
+    src: url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.eot");
+    src: url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/397c8fcc530c43baa17c99c904467434.svg#Migra")format("svg");
+}
+
+@font-face {
+    font-family: "The Seasons";
+    src: url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.eot");
+    src: url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/9366bd460113d8bf675fd2bdfe1ce764.svg#The Seasons")format("svg");
+}

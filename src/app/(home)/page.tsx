@@ -1,5 +1,7 @@
 import Footer from "../../../components/Footer";
 import HeroBanner from "../../../components/HeroBanner";
+import IntroRestaurant from "../../../components/IntroRestaurant";
+import IntroTeam from "../../../components/IntroTeam";
 import Navbar from "../../../components/Navbar";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroBanner />
+      <IntroRestaurant />
+      <IntroTeam />
       <Footer />
     </main>
   );
