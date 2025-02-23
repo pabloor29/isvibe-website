@@ -9,7 +9,8 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import Link from "next/link";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { Menu } from "lucide-react";
 
 const links = [
