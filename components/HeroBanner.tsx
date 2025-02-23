@@ -72,7 +72,7 @@ function HeroBanner() {
             custom={5}
             className="z-30 text-salmon md:text-9xl text-6xl font-tanBuster"
             >
-            '
+              &apos;
             </motion.h1>
             <motion.h1
             initial="hidden"
