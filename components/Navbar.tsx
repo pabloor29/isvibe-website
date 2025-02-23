@@ -11,7 +11,9 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import * as SheetPrimitive from "@radix-ui/react-dialog"
+
 
 const links = [
   {
@@ -87,9 +89,15 @@ function Navbar() {
           <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full bg-blueDark/50 ml-6">
             <Menu color="#FBC3BC"/>
           </SheetTrigger>
+          <a
+            href="/reservation"
+            className="shadow cursor-pointer overflow-hidden h-10 rounded-full bg-blueDark/50 mr-8 px-2"
+          >
+            <h3 className="text-2xl font-typewriter tracking-wide text-salmon">Réserver</h3>
+          </a>
           <SheetContent className="bg-blueDark">
-            <SheetHeader>
-              <SheetDescription className="flex flex-col">
+            <SheetHeader className="flex flex-row justify-between">
+              <SheetDescription className="flex flex-col w-3/4">
                 {links.map((items) => (
                   <a
                     key={items.label}
@@ -102,15 +110,13 @@ function Navbar() {
                   </a>
                 ))}
               </SheetDescription>
+              <SheetPrimitive.Close className="flex">
+                <X color="#FBC3BC" className="h-10 w-10 mr-4"/>
+                <span className="sr-only">Close</span>
+              </SheetPrimitive.Close>
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <a
-          href="/reservation"
-          className="shadow cursor-pointer overflow-hidden h-10 rounded-full bg-blueDark/50 flex items-center justify-center mr-6 px-2"
-        >
-          <h3 className="text-2xl tracking-wide text-salmon">Réserver</h3>
-        </a>
       </div>
     </nav>
   );
