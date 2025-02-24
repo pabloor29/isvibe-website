@@ -84,7 +84,7 @@ function Navbar() {
         </div>
       </motion.div>
 
-      <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full">
+      <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full overflow-hidden">
         <Sheet key="left">
           <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full bg-blueDark/50 ml-6">
             <Menu color="#FBC3BC"/>

@@ -46,7 +46,7 @@ const imagesVariants: Variants = {
 function IntroTeam() {
   return (
     <>
-    <div className="bg-blueDarkBG pb-8 py-28">
+    <div className="bg-blueDarkBG pb-8 py-28 w-full overflow-hidden">
         <div className="w-ful flex justify-center">
             <motion.div
                 initial="hiddenLeft"

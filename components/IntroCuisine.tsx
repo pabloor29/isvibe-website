@@ -3,6 +3,7 @@
 import React from 'react';
 import { Variants, motion } from "framer-motion";
 import CarouselRestaurant from './CarouselRestaurant';
+import Link from "next/link";
 
 
 const imagesVariants: Variants = {
@@ -47,7 +48,7 @@ const imagesVariants: Variants = {
 function IntroCuisine() {
   return (
     <>
-    <div className="bg-blueDarkBG py-20">
+    <div className="bg-blueDarkBG py-20 w-full overflow-hidden">
         <div className="w-full flex justify-center">
             <motion.div
                 initial="hiddenRight"
@@ -70,6 +71,14 @@ function IntroCuisine() {
                 <p className="text-salmon text-center font-theSeasons">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores eos ipsa? Esse voluptas cum maiores doloremque nobis! Inventore ratione commodi porro, expedita quibusdam esse numquam eos nobis atque libero eum accusamus praesentium consequatur nostrum blanditiis delectus nulla suscipit perferendis accusantium deleniti, odit beatae. Commodi ipsa, incidunt distinctio dicta eaque molestias sit quasi rerum quae fugit amet. Quidem ducimus suscipit et nemo veniam architecto animi, nam recusandae ipsa minima beatae iure asperiores ratione, tempore inventore est dolores temporibus praesentium rerum! Nemo, quis dolore blanditiis omnis quaerat pariatur, quod et eum quasi mollitia unde? Blanditiis facilis, et aspernatur provident ex tenetur.
                 </p>
+                <div className="mt-10 flex justify-center">
+                  <Link
+                    href="/menu"
+                    className="bg-salmon hover:bg-transparent border hover:border-salmon text-blueDark font-lg hover:text-salmon w-fit duration-200 px-4 py-3 hover:px-5 hover:py-4 hover:font-bold font-typewriter"
+                  >
+                    Découvrir le menu
+                  </Link>
+                </div>
             </motion.div>
         </div>
         <CarouselRestaurant />

@@ -46,7 +46,7 @@ const imagesVariants: Variants = {
 function IntroRestaurant() {
   return (
     <>
-    <div className="w-full flex flex-col items-center justify-center py-14 bg-blueDarkBG">
+    <div className="w-full flex flex-col items-center justify-center py-14 bg-blueDarkBG overflow-hidden">
         <div className="flex md:flex-row flex-col md:w-4/5 w-5/6 md:gap-32 gap-10 text-center text-salmon">
             <motion.div
                 initial="hiddenRight"
@@ -55,9 +55,9 @@ function IntroRestaurant() {
                 variants={imagesVariants}
                 className="font-theSeasons"
             >
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis! Perspiciatis repellat et quia accusantium voluptatum, dolor quos quas pariatur suscipit veniam in officia magnam deserunt itaque dolore ducimus amet.
-            </p>
+              <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis! Perspiciatis repellat et quia accusantium voluptatum, dolor quos quas pariatur suscipit veniam in officia magnam deserunt itaque dolore ducimus amet.
+              </p>
             </motion.div>
             <motion.div
                 initial="hiddenLeft"
@@ -66,9 +66,9 @@ function IntroRestaurant() {
                 variants={imagesVariants}
                 className="font-theSeasons"
             >
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis! Perspiciatis repellat et quia accusantium voluptatum, dolor quos quas pariatur suscipit veniam in officia magnam deserunt itaque dolore ducimus amet.
-            </p>
+              <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis! Perspiciatis repellat et quia accusantium voluptatum, dolor quos quas pariatur suscipit veniam in officia magnam deserunt itaque dolore ducimus amet.
+              </p>
             </motion.div>
         </div>
         <div className="md:w-1/5 w-2/5 h-1 bg-salmon my-12">
