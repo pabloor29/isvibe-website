@@ -104,8 +104,7 @@ function Contact() {
                 <div className="flex flex-col items-center justify-center font-theSeasons">
                   <p>Septembre - Juin</p>
                   <p>Mardi - Samedi </p>
-                  <p className="font-theSeasons md:text-2xl text-lg pb-3
-                  ">
+                  <p className="font-theSeasons md:text-2xl text-lg pb-3">
                     {" "}
                     12:00 - 14:00 & 18:00 - 22:00
                   </p>
