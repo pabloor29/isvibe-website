@@ -77,39 +77,43 @@ const ReservationForm = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("fr");
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
-
-    console.log(formData.eventDate, formData.eventTime);
+    }));
   };
-
-  const isWeekday = (date: any) => {
+  
+  const handleDateChange = (date: Date | null) => {
+    if (date) {
+      setFormData((prevData) => ({
+        ...prevData,
+        eventDate: date,
+        eventTime: date.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }),
+      }));
+    }
+  };
+  
+  const isWeekday = (date: Date): boolean => {
     const day = date.getDay();
     const month = date.getMonth();
     const dayOfMonth = date.getDate();
     const year = date.getFullYear();
-
+  
     const isAug31 = month === 7 && dayOfMonth === 31;
     const isNov16ToDec2 =
       year === 2024 &&
-      ((month === 10 && dayOfMonth >= 16) ||
-        month === 11 ||
-        (month === 11 && dayOfMonth <= 2));
+      ((month === 10 && dayOfMonth >= 16) || month === 11 || (month === 11 && dayOfMonth <= 2));
     const isJan1ToMar3 =
-        year === 2025 &&
-        ((month === 0 && dayOfMonth >= 1) ||
-         month === 1 ||             
-         (month === 2 && dayOfMonth <= 3));
+      year === 2025 &&
+      ((month === 0 && dayOfMonth >= 1) || month === 1 || (month === 2 && dayOfMonth <= 3));
     const isSeptToJuneMonday = day === 1 && (month >= 8 || month <= 5);
-
+  
     return day !== 0 && !isAug31 && !isNov16ToDec2 && !isSeptToJuneMonday && !isJan1ToMar3;
   };
-
-  const isRestaurantOpen = (time: any) => {
+  
+  const isRestaurantOpen = (time: Date): boolean => {
     const hour = time.getHours();
     const minute = time.getMinutes();
     return (
@@ -123,29 +127,21 @@ const ReservationForm = () => {
       (hour === 22 && minute === 0)
     );
   };
-
-  const handleSubmit = (e: any) => {
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const {
-      fullName,
-      email,
-      numberOfGuests,
-      eventDate,
-      eventTime,
-      specialRequests,
-    } = formData;
-
+  
+    const { fullName, email, numberOfGuests, eventDate, eventTime, specialRequests } = formData;
+  
     const mailTo = "pab.ortg@gmail.com";
     const subject = `Reservation - Le ${eventDate} à ${eventTime}`;
     const body = `Nom: ${fullName}\nEmail: ${email}\nCouverts: ${numberOfGuests}\nDate: ${eventDate}\nHeure: ${eventTime}\nCommentaire: ${specialRequests}`;
-
-    window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
+  
+    window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
     setSucceeded(true);
   };
+  
 
   const translation =
     translations[selectedLanguage as keyof typeof translations];
@@ -247,11 +243,7 @@ const ReservationForm = () => {
                 <DatePicker
                   showTimeSelect
                   selected={formData.eventDate}
-                  onChange={(date: any) =>
-                    handleChange({
-                      target: { name: "eventDate", value: date },
-                    })
-                  }
+                  onChange={handleDateChange}  // Utiliser la fonction dédiée
                   minDate={new Date()}
                   filterDate={isWeekday}
                   filterTime={isRestaurantOpen}
